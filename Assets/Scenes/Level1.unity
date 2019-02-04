@@ -191,7 +191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1626793472}
         m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1626793472}
         m_MethodName: DeactivateMenu
         m_Mode: 1
         m_Arguments:
@@ -767,7 +767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &912600805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chosenScene: MainMenu
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 912600804}
   isPaused: 0
 --- !u!4 &1626793473
 Transform:
