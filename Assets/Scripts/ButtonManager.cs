@@ -14,4 +14,14 @@ public class ButtonManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void HowToPlayButton()
+    {
+        SceneManager.LoadScene("HowToPlayMenu");
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
