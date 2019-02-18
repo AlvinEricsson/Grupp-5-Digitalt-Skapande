@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Hp_Pick_Up
-  - TrowingStar
+  tags: [Ground, Hp_Pick_Up, TrowingStar]
   layers:
   - Default
   - TransparentFX
