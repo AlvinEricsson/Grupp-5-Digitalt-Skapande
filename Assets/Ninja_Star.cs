@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ninja_Star : MonoBehaviour
 {
-    public float trowSpeed;
+    public float throwSpeed;
     private Rigidbody2D rbody;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Ninja_Star : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = new Vector2(trowSpeed*transform.localScale.x, 0f);
+        rbody.velocity = new Vector2(throwSpeed*transform.localScale.x, 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
