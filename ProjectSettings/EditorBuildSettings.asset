@@ -27,18 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/HowToPlayMenu.unity
     guid: 92f2e3faf0d76634a9e5948665665913
   - enabled: 1
-    path: Assets/Scripts/Scenes/Level1.unity
-    guid: 6608b1b6a1c7fb94393eed01cb426747
+    path: Assets/Scenes/Level1.unity
+    guid: 65b35c99ebd1ebd46984b74ad817aa96
   - enabled: 1
     path: Assets/Scripts/Scenes/PauseMenu.unity
     guid: 79f4e2b408f6aa84aa7fce39381f3d30
   - enabled: 1
-    path: Assets/Scripts/Scenes/Level1.unity
-    guid: 6608b1b6a1c7fb94393eed01cb426747
-  - enabled: 1
     path: Assets/Scripts/Scenes/PauseMenu.unity
     guid: 79f4e2b408f6aa84aa7fce39381f3d30
-  - enabled: 1
-    path: "Assets/Scripts/Scenes/trash error grogg b\xE4rs fel.unity"
-    guid: a2ded276f1b32ec4c8e1237741511333
   m_configObjects: {}
