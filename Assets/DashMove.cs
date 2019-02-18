@@ -11,7 +11,10 @@ public class DashMove : MonoBehaviour
     public float dashSpeed;
     private float dashTime;
     public float startDashTime;
-    private int direction;
+    public int direction;
+    public int dashes;
+    public groundCheck gCheck;
+    public static bool disableMovement = false;
 
     //Cooldown
     public bool isDashing = false;
@@ -22,38 +25,41 @@ public class DashMove : MonoBehaviour
         //Dash Forward
         rbody = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDashing == false)
+        if (isDashing == false && dashes >= 1)
         {
-
-            if (Input.GetKeyDown(dashRight) || Input.GetKeyDown(KeyCode.D))
+            disableMovement = true;
+            if (Input.GetKey(dashRight) || Input.GetKey(KeyCode.D))
             {
                 direction = 1;
             }
-            else if (Input.GetKeyDown(dashLeft) || Input.GetKeyDown(KeyCode.A))
+
+            if (Input.GetKey(dashLeft) || Input.GetKey(KeyCode.A))
             {
                 direction = 2;
             }
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 isDashing = true;
+                dashes = 0;
             }
+
         }
         else
         {
-            if (dashTime <= 0)
+            if (dashTime <= 0) //Checks if finished dashing.
             {
                 direction = 0;
                 dashTime = startDashTime;
                 rbody.velocity = Vector2.zero;
                 isDashing = false;
             }
-            else
+            else if(isDashing)
             {
                 dashTime -= Time.deltaTime;
 
@@ -61,29 +67,21 @@ public class DashMove : MonoBehaviour
                 {
                     rbody.velocity = Vector2.right * dashSpeed;
                 }
-                else if (direction == 2)
+
+                if (direction == 2)
                 {
                     rbody.velocity = Vector2.left * dashSpeed;
                 }
             }
-
+            disableMovement = false;
         }
 
-
+        if (gCheck.isGrounded >= 1)
+        {
+            dashes = 1;
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-  
+
 
