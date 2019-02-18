@@ -6,7 +6,7 @@ public class PlayerJump : MonoBehaviour
 {
     public float jumpHeight;
 
-    public GroundCheck groundCheck;
+    public groundCheck groundCheck;
     private Rigidbody2D rbody;
 
     void Start()
@@ -18,7 +18,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (groundCheck.touches > 0)
+            if (groundCheck.isGrounded > 0)
             {
                 rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
             }
