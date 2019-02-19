@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundCheck : MonoBehaviour
+public class groundCheck : MonoBehaviour
 {
-    public int touches;
+    public int isGrounded;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        touches++;
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = isGrounded + 1;
+
+        }
     }
-    
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        touches--;
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = isGrounded - 1;
+        }
     }
+
+   // private void OnCollisionStay2D(Collision2D collision)
+   // {
+        //DashMove.dashes = 0;
+  //  }
+
 }
