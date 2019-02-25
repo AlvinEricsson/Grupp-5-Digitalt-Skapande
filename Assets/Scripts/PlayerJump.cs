@@ -6,7 +6,7 @@ public class PlayerJump : MonoBehaviour
 {
     public float jumpHeight;
 
-    public groundCheck groundCheck;
+    public GroundCheck groundCheck;
     private Rigidbody2D rbody;
 
     void Start()

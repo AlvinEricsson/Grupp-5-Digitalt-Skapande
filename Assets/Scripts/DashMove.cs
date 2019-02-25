@@ -13,7 +13,7 @@ public class DashMove : MonoBehaviour
     public float startDashTime;
     public int direction;
     public int dashes;
-    public groundCheck gCheck;
+    public GroundCheck gCheck;
     public static bool disableMovement = false;
 
     //Cooldown

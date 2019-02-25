@@ -6,7 +6,7 @@ public class movement : MonoBehaviour
 {
     public float mSpeed;
     Rigidbody2D rbody;
-    public groundCheck groundCheck;
+    public GroundCheck groundCheck;
     public float jumpSpeed;
 
     // Start is called before the first frame update
