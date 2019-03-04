@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350834983039966383}
   - component: {fileID: 1350834983039966369}
-  - component: {fileID: 8988790529273129031}
+  - component: {fileID: 8504328823052821309}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8988790529273129031
+--- !u!114 &8504328823052821309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350834983039966382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d956fb69d2f05645a37ea0ebb0d03ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c72d39ab0a2fd349a4c641a27020d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
@@ -83,8 +83,8 @@ GameObject:
   - component: {fileID: 1350834983710898889}
   - component: {fileID: 1350834983710898894}
   - component: {fileID: 1350834983710898893}
-  - component: {fileID: 1350834983710898892}
-  - component: {fileID: 1350834983710898891}
+  - component: {fileID: 1361798977826666010}
+  - component: {fileID: 1455525402555878877}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1350834983710898892
+--- !u!114 &1361798977826666010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,21 +211,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350834983710898888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777360b29a6cf37479620fba2dfb208d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpHeight: 10
-  groundCheck: {fileID: 0}
---- !u!114 &1350834983710898891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350834983710898888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a1ded42da70554085f9a7246e679ca, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ae353182c759a41aaef291798b6d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  groundCheck: {fileID: 8504328823052821309}
+  jumpSpeed: 10
+--- !u!114 &1455525402555878877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350834983710898888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9bff0bc59bca748b1becf31fa8b397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 10
+  startDashTime: 0.5
+  direction: 0
+  dashes: 0
+  gCheck: {fileID: 8504328823052821309}
+  isDashing: 0
