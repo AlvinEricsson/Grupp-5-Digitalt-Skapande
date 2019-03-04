@@ -18,6 +18,9 @@ public class DashMove : MonoBehaviour
 
     //Cooldown
     public bool isDashing = false;
+    public bool canDash = true;
+    public float dashOnGround;
+    public float startDashGround = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,7 @@ public class DashMove : MonoBehaviour
         //Dash Forward
         rbody = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
+
     }
 
     // Update is called once per frame
@@ -56,29 +60,49 @@ public class DashMove : MonoBehaviour
             {
                 direction = 0;
                 dashTime = startDashTime;
+                canDash = false;
                 rbody.velocity = Vector2.zero;
                 isDashing = false;
+
+
             }
-            else if(isDashing)
+            else if (isDashing)
             {
                 dashTime -= Time.deltaTime;
 
-                if (direction == 1)
+                if (direction == 1 && canDash == true)
                 {
                     rbody.velocity = Vector2.right * dashSpeed;
                 }
 
-                if (direction == 2)
+                if (direction == 2 && canDash == true)
                 {
                     rbody.velocity = Vector2.left * dashSpeed;
                 }
             }
             disableMovement = false;
+
         }
+        startDashGround += Time.deltaTime;
+        if (startDashGround >= 2 && direction == 2)
+        {
+            canDash = true;
+            startDashGround = 0;
+            dashes = 1;
+        }
+        if (startDashGround >= 2 && direction == 1)
+        {
+            canDash = true;
+            startDashGround = 0;
+            dashes = 1;
+        }
+
 
         if (gCheck.isGrounded >= 1)
         {
+
             dashes = 1;
+
         }
     }
 }
