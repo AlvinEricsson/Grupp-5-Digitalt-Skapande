@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 67778000}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,10 +311,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 351255120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a1ded42da70554085f9a7246e679ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d9bff0bc59bca748b1becf31fa8b397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  dashSpeed: 10
+  startDashTime: 0.5
+  direction: 0
+  dashes: 0
+  gCheck: {fileID: 1021910072}
+  isDashing: 0
 --- !u!114 &351255124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,12 +329,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 351255120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777360b29a6cf37479620fba2dfb208d, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ae353182c759a41aaef291798b6d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 10
-  doubleJump: 0
+  moveSpeed: 0
   groundCheck: {fileID: 1021910072}
+  jumpSpeed: 10
 --- !u!50 &351255125
 Rigidbody2D:
   serializedVersion: 4
@@ -349,7 +354,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &351255126
 BoxCollider2D:
@@ -455,7 +460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658752397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.38, z: -10}
+  m_LocalPosition: {x: -0.06, y: 0.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -487,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   border: 1
-  maxX: 6
+  maxX: 4.9
   minX: -6
   maxY: 2
   minY: 0
@@ -505,7 +510,7 @@ GameObject:
   - component: {fileID: 883199920}
   m_Layer: 0
   m_Name: Walls (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,10 +644,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1021910070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e46175f1132ae46954a599921354f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c72d39ab0a2fd349a4c641a27020d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touches: 0
+  isGrounded: 0
 --- !u!61 &1021910073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -653,7 +658,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -712,7 +717,7 @@ GameObject:
   - component: {fileID: 2098203475}
   m_Layer: 0
   m_Name: Walls (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
