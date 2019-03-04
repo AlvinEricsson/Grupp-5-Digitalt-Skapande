@@ -4,21 +4,43 @@ using UnityEngine;
 
 public class TEstScript : MonoBehaviour
 {
+    public float coolDown;
+    public float coolDownTimer;
     public GameObject Throwing_Star;
     public Transform throwPoint;
     // Start is called before the first frame update
     void Start()
     {
-        
+        coolDownTimer = coolDown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        CoolDownFunction();
+      
+        if (Input.GetKeyDown(KeyCode.Q) && coolDownTimer <= 0)
         {
-            GameObject trowingStar =(GameObject)Instantiate(Throwing_Star, throwPoint.position, throwPoint.rotation);
-            trowingStar.transform.localScale = transform.localScale;
+          
+            CanShoot();
         }
     }
+
+    private void CoolDownFunction()
+    {
+        if (coolDownTimer >= 0)
+        {
+            coolDownTimer -= Time.deltaTime;
+        }
+    }
+
+    private void CanShoot()
+    {
+        coolDownTimer = coolDown;
+        Debug.Log("Hej");
+        GameObject trowingStar = (GameObject)Instantiate(Throwing_Star, throwPoint.position, throwPoint.rotation);
+        trowingStar.transform.localScale = transform.localScale;
+    }
+
 }

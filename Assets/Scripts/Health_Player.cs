@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Health_Player : MonoBehaviour
 {
-    public float coolDown = 5;
+    public float coolDown = 3;
     public float coolDownTimer;
 
     public float health;
