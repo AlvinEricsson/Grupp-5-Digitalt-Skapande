@@ -15,11 +15,24 @@ public class Ninja_Star : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = new Vector2(trowSpeed*transform.localScale.x, 0f);
+        rbody.velocity = new Vector2(trowSpeed * transform.localScale.x, 0f);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "GroundEnemy")
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 }

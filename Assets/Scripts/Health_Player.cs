@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Health_Player : MonoBehaviour
 {
+    public float coolDown = 5;
+    public float coolDownTimer;
+
     public float health;
     public int numOfHearts;
     public Image[] hearts;
@@ -13,11 +16,18 @@ public class Health_Player : MonoBehaviour
     public Sprite emptyHeart;
     public string chosenscene;
 
+    private void Start()
+    {
+        coolDownTimer = coolDown;
+    }
     private void Update()
     {
+        CoolDownFunction();
+
         if (health > numOfHearts)
         {
             health = numOfHearts;
+
         }
 
 
@@ -58,13 +68,39 @@ public class Health_Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void CoolDownFunction()
+    {
+        if (coolDownTimer >= 0)
+        {
+            coolDownTimer -= Time.deltaTime;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Hp_Pick_Up")
         {
             health = 0.5f + health;
             Debug.Log("Hello world");
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "GroundEnemy" && coolDownTimer <= 0)
+        {
+            CanTakeDamage();
+            //coolDownTimer = coolDown;
+        }
+    }
+
+    void CanTakeDamage()
+    {
+        {
+            //coolDownTimer += coolDown;
+            health--;
+            
+            coolDownTimer = coolDown;
+
+        Debug.Log("Grogg bär sucks");
         }
     }
 }
