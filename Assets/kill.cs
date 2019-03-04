@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class kill : MonoBehaviour
 {
-    public string currentscene;
-    private void OnCollisionEnter2D(Collision2D collision)
+    Health_Player H;
+    public string currentScene;
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("currentscene");
+            
+            SceneManager.LoadScene(currentScene);
         }
     }
 
