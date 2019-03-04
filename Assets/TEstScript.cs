@@ -39,7 +39,7 @@ public class TEstScript : MonoBehaviour
     {
         coolDownTimer = coolDown;
         Debug.Log("Hej");
-        GameObject trowingStar = (GameObject)Instantiate(Throwing_Star, throwPoint.position, throwPoint.rotation);
+        GameObject trowingStar = Instantiate(Throwing_Star, throwPoint.position, throwPoint.rotation);
         trowingStar.transform.localScale = transform.localScale;
     }
 
