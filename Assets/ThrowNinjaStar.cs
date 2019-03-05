@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TEstScript : MonoBehaviour
+public class ThrowNinjaStar : MonoBehaviour
 {
     public float coolDown;
     public float coolDownTimer;
