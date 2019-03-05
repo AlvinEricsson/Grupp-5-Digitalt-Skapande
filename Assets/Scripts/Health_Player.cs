@@ -15,6 +15,7 @@ public class Health_Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public string chosenscene;
+    public CameraShake cameraShake;
 
     private void Start()
     {
@@ -97,6 +98,7 @@ public class Health_Player : MonoBehaviour
         {
             //coolDownTimer += coolDown;
             health--;
+            StartCoroutine(cameraShake.Shake(.05f, 1f));
             
             coolDownTimer = coolDown;
 
