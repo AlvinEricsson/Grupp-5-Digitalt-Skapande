@@ -15,7 +15,6 @@ public class movement : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-        ;
     }
 
     // Update is called once per frame
@@ -25,9 +24,6 @@ public class movement : MonoBehaviour
         if (DashMove.disableMovement == true)
         {
             rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rbody.velocity.y);
-
-
-
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -47,17 +43,5 @@ public class movement : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
             }
         }
-
     }
-    
-
-        
-
-
-
-
-
-
-    
-
 }

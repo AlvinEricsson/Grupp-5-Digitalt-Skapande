@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
     public bool doubleJump = false;
 
     public GroundCheck groundCheck;
-    
 
     public float moveSpeed;
     private Rigidbody2D rbody;
@@ -29,7 +28,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (groundCheck.touches > 0)
+            
             {
                 rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
             }
