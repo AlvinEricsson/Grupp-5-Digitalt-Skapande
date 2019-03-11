@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [Ground, Hp_Pick_Up, GM, TrowingStar, InvisibleWall, Enemy, Wall, GroundEnemy]
+  tags:
+  - Enemy
+  - Ground
+  - TrowingStar
+  - InvisibleWall
+  - Enemy
+  - Wall
+  - GroundEnemy
+  - GM
   layers:
   - Default
   - TransparentFX
@@ -13,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 

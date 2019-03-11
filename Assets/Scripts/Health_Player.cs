@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Health_Player : MonoBehaviour
 {
-    public float coolDown = 5;
+    public float coolDown = 3;
     public float coolDownTimer;
 
     public float health;
@@ -15,6 +15,7 @@ public class Health_Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public string chosenscene;
+    public CameraShake cameraShake;
 
     private void Start()
     {
@@ -78,17 +79,21 @@ public class Health_Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Hp_Pick_Up")
-        {
-            health = 0.5f + health;
-            Debug.Log("Hello world");
-            Destroy(collision.gameObject);
-        }
+
 
         if (collision.gameObject.tag == "GroundEnemy" && coolDownTimer <= 0)
         {
             CanTakeDamage();
             //coolDownTimer = coolDown;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Hp_Pick_Up" && health < 5)
+        {
+            health = 1f + health;
+            Debug.Log("Hello world");
+            Destroy(collision.gameObject);
         }
     }
 
@@ -97,10 +102,11 @@ public class Health_Player : MonoBehaviour
         {
             //coolDownTimer += coolDown;
             health--;
-            
+            StartCoroutine(cameraShake.Shake(.05f, 1f));
+
             coolDownTimer = coolDown;
 
-        Debug.Log("Grogg bär sucks");
+            Debug.Log("Grogg bär sucks");
         }
     }
 }

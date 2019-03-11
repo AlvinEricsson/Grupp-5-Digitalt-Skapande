@@ -23,7 +23,8 @@ public class PauseMenu : MonoBehaviour
 
         else
         {
-            DeactivateMenu();
+            DeactivateMenu(); 
+
         }
 
     }
