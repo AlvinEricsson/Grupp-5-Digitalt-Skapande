@@ -9,6 +9,11 @@ public class movement : MonoBehaviour
     public groundCheck groundCheck;
     public float jumpSpeed;
 
+    public float knockback;
+    public float knockbackLength;
+    public float knockbackCount;
+    public bool knockFromRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +24,19 @@ public class movement : MonoBehaviour
     void Update()
     {
 
-        if (DashMove.disableMovement == true)
-        {
-            rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * mSpeed, rbody.velocity.y);
 
-            if (Input.GetButtonDown("Jump"))
+        if (knockbackCount <= 0)
+        {
+            if (DashMove.disableMovement == true)
             {
-                if (groundCheck.isGrounded > 0)
+                rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * mSpeed, rbody.velocity.y);
+
+                if (Input.GetButtonDown("Jump"))
                 {
-                    rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+                    if (groundCheck.isGrounded > 0)
+                    {
+                        rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+                    }
                 }
             }
         }

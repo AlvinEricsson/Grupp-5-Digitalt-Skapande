@@ -28,7 +28,6 @@ public class DashMove : MonoBehaviour
         //Dash Forward
         rbody = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
-
     }
 
     // Update is called once per frame
@@ -41,18 +40,15 @@ public class DashMove : MonoBehaviour
             {
                 direction = 1;
             }
-
             if (Input.GetKey(dashLeft) || Input.GetKey(KeyCode.A))
             {
                 direction = 2;
             }
-
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 isDashing = true;
                 dashes = 0;
             }
-
         }
         else
         {
@@ -63,25 +59,20 @@ public class DashMove : MonoBehaviour
                 canDash = false;
                 rbody.velocity = Vector2.zero;
                 isDashing = false;
-
-
             }
             else if (isDashing)
             {
                 dashTime -= Time.deltaTime;
-
                 if (direction == 1 && canDash == true)
                 {
                     rbody.velocity = Vector2.right * dashSpeed;
                 }
-
                 if (direction == 2 && canDash == true)
                 {
                     rbody.velocity = Vector2.left * dashSpeed;
                 }
             }
             disableMovement = false;
-
         }
         startDashGround += Time.deltaTime;
         if (startDashGround >= 2 && direction == 2)
@@ -96,15 +87,12 @@ public class DashMove : MonoBehaviour
             startDashGround = 0;
             dashes = 1;
         }
-
-
         if (gCheck.isGrounded >= 1)
         {
-
             dashes = 1;
-
         }
     }
+    
 }
 
 
