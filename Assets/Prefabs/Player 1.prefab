@@ -153,9 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ae353182c759a41aaef291798b6d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 9.1
   groundCheck: {fileID: 1596451592}
-  jumpSpeed: 8
+  jumpSpeed: 8.2
+  knockback: 0
+  knockbackLength: 0
+  knockbackCount: 0
+  knockFromRight: 0
 --- !u!114 &790992766
 MonoBehaviour:
   m_ObjectHideFlags: 0
