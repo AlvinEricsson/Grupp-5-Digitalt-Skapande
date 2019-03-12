@@ -12,6 +12,11 @@ public class movement : MonoBehaviour
     public float jumpSpeed;
     private float dirX;
 
+    public float knockback;
+    public float knockbackLength;
+    public float knockbackCount;
+    public bool knockFromRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +76,22 @@ public class movement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.D))
             {
                 transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+
+        if (knockbackCount <= 0)
+        {
+            if (DashMove.disableMovement == true)
+            {
+                rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rbody.velocity.y);
+
+                if (Input.GetButtonDown("Jump"))
+                {
+                    if (groundCheck.isGrounded > 0)
+                    {
+                        rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+                    }
+                }
             }
         }
 
