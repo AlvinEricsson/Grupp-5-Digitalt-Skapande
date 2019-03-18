@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8277444463165517823}
   - component: {fileID: 7266602884720452390}
   - component: {fileID: 9072946829619085632}
-  - component: {fileID: 183677188}
+  - component: {fileID: 241342172}
   m_Layer: 0
   m_Name: GroundEnemy
   m_TagString: GroundEnemy
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033a06c07825e8147abba238bdd29863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   left: 1
 --- !u!114 &9072946829619085632
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
---- !u!114 &183677188
+--- !u!114 &241342172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,10 +168,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5685975054234128568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79aefa182e95a644da2f2f688b06d21b, type: 3}
+  m_Script: {fileID: 11500000, guid: 246d27f5f9d38cc47912bd396e173c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  thrust: 10
+  knockTime: 1
 --- !u!1 &6511865062842595494
 GameObject:
   m_ObjectHideFlags: 0
