@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     
     public float moveSpeed;
@@ -11,12 +11,6 @@ public class movement : MonoBehaviour
     public GroundCheck groundCheck;
     public float jumpSpeed;
     private float dirX;
-
-    public float knockback;
-    public float knockbackLength;
-    public float knockbackCount;
-    public bool knockFromRight;
-
 
     // Start is called before the first frame update
     void Start()
@@ -78,9 +72,6 @@ public class movement : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
             }
         }
-
-        if (knockbackCount <= 0)
-        {
             if (DashMove.disableMovement == true)
             {
                 rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rbody.velocity.y);
@@ -93,8 +84,6 @@ public class movement : MonoBehaviour
                     }
                 }
             }
-        }
-
     }
     
 

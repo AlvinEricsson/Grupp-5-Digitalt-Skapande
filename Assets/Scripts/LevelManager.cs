@@ -6,11 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject currentCheckpoint;
 
-    private movement player;
+    private Movement player;
 
     void Start()
     {
-        player = FindObjectOfType<movement>();
+        player = FindObjectOfType<Movement>();
     }
 
     public void RespawnPlayer()
