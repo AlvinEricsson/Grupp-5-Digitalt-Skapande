@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 790992767}
   - component: {fileID: 790992766}
   - component: {fileID: 790992768}
-  - component: {fileID: 790992759}
   - component: {fileID: 790992760}
   - component: {fileID: 790992763}
   - component: {fileID: 790992764}
@@ -196,27 +195,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &790992759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790992756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d9bff0bc59bca748b1becf31fa8b397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 25
-  startDashTime: 0.2
-  direction: 0
-  dashes: 0
-  gCheck: {fileID: 1596451590}
-  isDashing: 0
-  canDash: 1
-  dashOnGround: 0
-  startDashGround: 0
 --- !u!114 &790992760
 MonoBehaviour:
   m_ObjectHideFlags: 0
