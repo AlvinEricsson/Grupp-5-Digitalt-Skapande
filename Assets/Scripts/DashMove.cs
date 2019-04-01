@@ -91,8 +91,12 @@ public class DashMove : MonoBehaviour
         {
             dashes = 1;
         }
+        if (isDashing == false)
+        {
+            disableMovement = true;
+        }
     }
-    
+
 }
 
 
