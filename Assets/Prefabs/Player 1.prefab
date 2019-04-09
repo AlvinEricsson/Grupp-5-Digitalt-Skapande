@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDown: 1
   coolDownTimer: 0
+  arrow: {fileID: 0}
   health: 5
   numOfHearts: 5
   hearts:

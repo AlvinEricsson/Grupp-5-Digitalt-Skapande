@@ -6,7 +6,8 @@ public class Arrow : MonoBehaviour
 {
     public float moveSpeed = 7f;
     public float speed = 5f;
-
+    public Health_Player health;
+    
     public Transform target;
     Rigidbody2D rb;
 
@@ -25,7 +26,7 @@ public class Arrow : MonoBehaviour
         rb.velocity = moveDirection * moveSpeed;
         transform.rotation = Quaternion.Euler(0, 0, ang);
         Destroy(gameObject, 3f);
-
+        
         
 
         //rb.velocity = transform.forward * 100;
@@ -39,12 +40,13 @@ public class Arrow : MonoBehaviour
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D (Collider2D col)
+    void OnCollisionEnter2D (Collision2D col)
     {
         if(col.gameObject.name.Equals("Player"))
         {
             Debug.Log("Hit!");
             Destroy(gameObject);
+            
         }
     }
 }
