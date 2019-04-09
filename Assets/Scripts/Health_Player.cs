@@ -8,7 +8,8 @@ public class Health_Player : MonoBehaviour
 {
     public float coolDown = 3;
     public float coolDownTimer;
-    
+
+    public GameObject soundPickup;
 
     public float health;
     public int numOfHearts;
@@ -101,6 +102,8 @@ public class Health_Player : MonoBehaviour
             health = 1f + health;
             Debug.Log("Hello world");
             Destroy(collision.gameObject);
+            var sound = Instantiate(soundPickup, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
         }
     }
 
