@@ -10,6 +10,7 @@ public class Health_Player : MonoBehaviour
     public float coolDownTimer;
 
     public GameObject soundPickup;
+    public GameObject soundDamageTaken;
 
     public float health;
     public int numOfHearts;
@@ -92,6 +93,8 @@ public class Health_Player : MonoBehaviour
         {
             health--;
             StartCoroutine(cameraShake.Shake(.05f, 1f));
+            var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
         }
 
     }
@@ -113,7 +116,8 @@ public class Health_Player : MonoBehaviour
             //coolDownTimer += coolDown;
             health--;
             StartCoroutine(cameraShake.Shake(.05f, 1f));
-
+            var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
             coolDownTimer = coolDown;
 
             Debug.Log("Grogg bär sucks");

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
+    public GameObject jumpSound;
     public float moveSpeed;
     Rigidbody2D rbody;
     private Animator anim;
@@ -59,6 +60,8 @@ public class Movement : MonoBehaviour
                 if (groundCheck.isGrounded > 0)
                 {
                     rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+                    var sound = Instantiate(jumpSound, transform.position, Quaternion.identity);
+                    Destroy(sound, 1);
                 }
             }
 
