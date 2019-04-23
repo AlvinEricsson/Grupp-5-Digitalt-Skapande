@@ -3730,6 +3730,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 790992767, guid: 1dd056c69e596644dbec286abc235386, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 4602856027634322748, guid: cca4b82b48ea47c439131e2ae4eeb54c,
+        type: 3}
+    - target: {fileID: 790992766, guid: 1dd056c69e596644dbec286abc235386, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 902296278581543908, guid: cffd8f92aee5f48438e3054e689e4e08,
+        type: 3}
     - target: {fileID: 790992764, guid: 1dd056c69e596644dbec286abc235386, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

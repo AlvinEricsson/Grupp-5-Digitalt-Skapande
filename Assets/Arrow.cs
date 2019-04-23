@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour
 {
     public float moveSpeed = 7f;
     public float speed = 5f;
+    public bool freezeRotation;
     public Health_Player health;
     
     public Transform target;
@@ -26,6 +27,7 @@ public class Arrow : MonoBehaviour
         rb.velocity = moveDirection * moveSpeed;
         transform.rotation = Quaternion.Euler(0, 0, ang);
         Destroy(gameObject, 3f);
+        freezeRotation = false;
         
         
 
@@ -47,6 +49,11 @@ public class Arrow : MonoBehaviour
             Debug.Log("Hit!");
             Destroy(gameObject);
             
+        }
+
+        if(col.gameObject.tag.Equals("Ground"))
+        {
+            freezeRotation = true; 
         }
     }
 }
