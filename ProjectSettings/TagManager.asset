@@ -12,6 +12,8 @@ TagManager:
   - Wall
   - GroundEnemy
   - GM
+  - Hp_Pick_Up
+  - Arrow
   layers:
   - Default
   - TransparentFX

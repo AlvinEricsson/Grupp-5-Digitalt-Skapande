@@ -22,6 +22,8 @@ public class DashMove : MonoBehaviour
     public float dashOnGround;
     public float startDashGround = 0;
 
+    public GameObject dashSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,8 @@ public class DashMove : MonoBehaviour
             {
                 isDashing = true;
                 dashes = 0;
+                var sound = Instantiate(dashSound, transform.position, Quaternion.identity);
+                Destroy(sound, 1);
             }
         }
         else

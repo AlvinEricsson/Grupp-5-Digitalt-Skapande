@@ -8,6 +8,7 @@ public class Health_Player : MonoBehaviour
 {
     public float coolDown = 3;
     public float coolDownTimer;
+    
 
     public float health;
     public int numOfHearts;
@@ -86,6 +87,12 @@ public class Health_Player : MonoBehaviour
             CanTakeDamage();
             //coolDownTimer = coolDown;
         }
+        if (collision.gameObject.tag == "Arrow")
+        {
+            health--;
+            StartCoroutine(cameraShake.Shake(.05f, 1f));
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
