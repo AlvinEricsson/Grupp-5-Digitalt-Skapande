@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-<<<<<<< HEAD
-    [SerializeField]
-    public GameObject jumpSound;
-=======
 
->>>>>>> 29576be11139b0d84bf547845c0fabd10afa357c
+    [SerializeField]
+
     public float moveSpeed;
     Rigidbody2D rbody;
     private Animator anim;
@@ -65,18 +62,12 @@ public class Movement : MonoBehaviour
                 rbody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rbody.velocity.y);
                 if (Input.GetButtonDown("Jump"))
                 {
-<<<<<<< HEAD
-                    rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
-                    var sound = Instantiate(jumpSound, transform.position, Quaternion.identity);
-                    Destroy(sound, 1);
-=======
                     if (groundCheck.isGrounded > 0)
                     {
                         rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
                         var sound = Instantiate(jumpSound, transform.position, Quaternion.identity);
                         Destroy(sound, 1);
                     }
->>>>>>> 29576be11139b0d84bf547845c0fabd10afa357c
                 }
             }
 
