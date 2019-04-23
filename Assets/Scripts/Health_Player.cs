@@ -9,6 +9,9 @@ public class Health_Player : MonoBehaviour
     public float coolDown = 3;
     public float coolDownTimer;
 
+    public GameObject soundPickup;
+    public GameObject soundDamageTaken;
+
     public float health;
     public int numOfHearts;
     public Image[] hearts;
@@ -86,6 +89,14 @@ public class Health_Player : MonoBehaviour
             CanTakeDamage();
             //coolDownTimer = coolDown;
         }
+        if (collision.gameObject.tag == "Arrow")
+        {
+            health--;
+            StartCoroutine(cameraShake.Shake(.05f, 1f));
+            var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -94,6 +105,8 @@ public class Health_Player : MonoBehaviour
             health = 1f + health;
             Debug.Log("Hello world");
             Destroy(collision.gameObject);
+            var sound = Instantiate(soundPickup, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
         }
     }
 
@@ -103,7 +116,8 @@ public class Health_Player : MonoBehaviour
             //coolDownTimer += coolDown;
             health--;
             StartCoroutine(cameraShake.Shake(.05f, 1f));
-
+            var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
             coolDownTimer = coolDown;
 
             Debug.Log("Grogg bär sucks");
