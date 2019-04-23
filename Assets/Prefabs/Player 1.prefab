@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 9.1
-  groundCheck: {fileID: 1596451592}
+  groundCheck: {fileID: 0}
   jumpSpeed: 8.2
 --- !u!114 &790992766
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   startDashTime: 0.5
   direction: 0
   dashes: 0
-  gCheck: {fileID: 1596451592}
+  gCheck: {fileID: 0}
   isDashing: 0
   canDash: 1
   dashOnGround: 0
@@ -286,7 +286,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1596451589}
   - component: {fileID: 1596451591}
-  - component: {fileID: 1596451592}
   - component: {fileID: 1596451590}
   m_Layer: 0
   m_Name: GroundCheck
@@ -335,19 +334,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6404144, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1596451592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596451588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c72d39ab0a2fd349a4c641a27020d79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrounded: 0
 --- !u!114 &1596451590
 MonoBehaviour:
   m_ObjectHideFlags: 0
