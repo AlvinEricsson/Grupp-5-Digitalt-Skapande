@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
+    [SerializeField]
+    GameObject dustCloud;
+
     public int isGrounded;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -11,6 +14,8 @@ public class GroundCheck : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = isGrounded + 1;
+
+            Instantiate(dustCloud, transform.position, dustCloud.transform.rotation);
 
         }
     }
@@ -23,9 +28,11 @@ public class GroundCheck : MonoBehaviour
         }
     }
 
-   // private void OnCollisionStay2D(Collision2D collision)
-   // {
-        //DashMove.dashes = 0;
-  //  }
+    // private void OnCollisionStay2D(Collision2D collision)
+    // {
+    //DashMove.dashes = 0;
+    //  }
 
+   
+  
 }
