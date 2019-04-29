@@ -2495,6 +2495,10 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 248803042, guid: 706093726f714c64b98804542f8eeadf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 248803042, guid: 706093726f714c64b98804542f8eeadf, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -5643,6 +5647,16 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 790992766, guid: 1dd056c69e596644dbec286abc235386, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 902296278581543908, guid: cffd8f92aee5f48438e3054e689e4e08,
+        type: 3}
+    - target: {fileID: 1596451590, guid: 1dd056c69e596644dbec286abc235386, type: 3}
+      propertyPath: dustCloud
+      value: 
+      objectReference: {fileID: 7787946350033946133, guid: 67f1e2d75941a9d4cad2c37fd76fae7d,
+        type: 3}
     - target: {fileID: 790992764, guid: 1dd056c69e596644dbec286abc235386, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
@@ -5682,6 +5696,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2202306436479262039, guid: a662372dee782854ea5ef5c90326fa72,
         type: 3}
+    - target: {fileID: 1596451590, guid: 1dd056c69e596644dbec286abc235386, type: 3}
+      propertyPath: dustCloud
+      value: 
+      objectReference: {fileID: 7787946350033946133, guid: 67f1e2d75941a9d4cad2c37fd76fae7d,
+        type: 3}
     - target: {fileID: 786509110, guid: 1dd056c69e596644dbec286abc235386, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5694,16 +5713,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 790992766, guid: 1dd056c69e596644dbec286abc235386, type: 3}
-      propertyPath: dashSound
-      value: 
-      objectReference: {fileID: 902296278581543908, guid: cffd8f92aee5f48438e3054e689e4e08,
-        type: 3}
-    - target: {fileID: 1596451590, guid: 1dd056c69e596644dbec286abc235386, type: 3}
-      propertyPath: dustCloud
-      value: 
-      objectReference: {fileID: 7787946350033946133, guid: 67f1e2d75941a9d4cad2c37fd76fae7d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dd056c69e596644dbec286abc235386, type: 3}
 --- !u!1 &1214562883
