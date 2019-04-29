@@ -14,7 +14,7 @@ public class EnemyShoot : MonoBehaviour
 
     void Start()
     {
-        fireRate = 2f;
+        fireRate = 3f;
         nextFire = Time.time;
         //arrow.transform.Rotate(0, 0, -90);
     }
