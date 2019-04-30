@@ -103,9 +103,9 @@ public class Health_Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hp_Pick_Up" && health < 5)
         {
+            Destroy(collision.gameObject);
             health = 1f + health;
             Debug.Log("Hello world");
-            Destroy(collision.gameObject);
             var sound = Instantiate(soundPickup, transform.position, Quaternion.identity);
             Destroy(sound, 1);
         }
