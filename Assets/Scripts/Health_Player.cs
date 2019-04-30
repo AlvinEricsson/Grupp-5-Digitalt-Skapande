@@ -61,6 +61,7 @@ public class Health_Player : MonoBehaviour
         }
         if (health < 1)
         {
+            
             Debug.Log("Du dog");
 
 
