@@ -14,12 +14,11 @@ public class GroundCheck : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = isGrounded + 1;
-<<<<<<< HEAD
+
 
             Instantiate(dustCloud, transform.position, dustCloud.transform.rotation);
 
-=======
->>>>>>> MovingPLatform
+
         }
     }
 
