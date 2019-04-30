@@ -9,18 +9,20 @@ public class GroundCheck : MonoBehaviour
 
     public int isGrounded;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = isGrounded + 1;
 
+
             Instantiate(dustCloud, transform.position, dustCloud.transform.rotation);
+
 
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
