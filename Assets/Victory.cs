@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
-
+    
     public SpriteRenderer rend;
     public Sprite sprite;
     public float timer;

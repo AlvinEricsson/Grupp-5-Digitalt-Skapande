@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &324333705
 BoxCollider2D:
@@ -116,7 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &786509111
 BoxCollider2D:
@@ -184,12 +184,12 @@ Transform:
   m_Children:
   - {fileID: 1596451589}
   - {fileID: 539831798}
-  - {fileID: 786509110}
-  - {fileID: 324333704}
-  - {fileID: 1796289470}
   - {fileID: 54135084076058110}
+  - {fileID: 786509110}
   - {fileID: 4220673843444313243}
+  - {fileID: 324333704}
   - {fileID: 2051935110522132650}
+  - {fileID: 1796289470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -277,7 +277,8 @@ MonoBehaviour:
   moveSpeed: 9.1
   groundCheck: {fileID: 1596451590}
   jumpSpeed: 8.2
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 4602856027634322748, guid: cca4b82b48ea47c439131e2ae4eeb54c,
+    type: 3}
 --- !u!114 &790992766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1796289471
 BoxCollider2D:
@@ -594,7 +595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6575717767263054413
 BoxCollider2D:
@@ -651,7 +652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5483861475434041377
 BoxCollider2D:
@@ -708,7 +709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 790992757}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &981698496663907317
 BoxCollider2D:
