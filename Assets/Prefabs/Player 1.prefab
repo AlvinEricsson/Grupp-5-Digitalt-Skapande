@@ -273,7 +273,8 @@ MonoBehaviour:
   moveSpeed: 9.1
   groundCheck: {fileID: 1596451590}
   jumpSpeed: 8.2
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 4602856027634322748, guid: cca4b82b48ea47c439131e2ae4eeb54c,
+    type: 3}
 --- !u!114 &790992766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +459,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08064107, y: 0}
