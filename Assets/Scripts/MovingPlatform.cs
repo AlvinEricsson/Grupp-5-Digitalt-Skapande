@@ -21,7 +21,10 @@ public class MovingPlatform : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.collider.transform.SetParent(null);
+            moving = false;
+            
         }
+        
     }
     private void FixedUpdate()
     {
