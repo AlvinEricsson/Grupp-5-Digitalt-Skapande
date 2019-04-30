@@ -26,22 +26,16 @@ public class Ninja_Star : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Player")
+        if (collision.tag == "Ground")
         {
             Instantiate(Star_Spark, transform.position, Star_Spark.transform.rotation);
-
+            Destroy(gameObject);
+        }
+        if (collision.tag == "GroundEnemy")
+        {
+            Instantiate(Star_Spark, transform.position, Star_Spark.transform.rotation);
             Destroy(gameObject);
         }
 
-
     }
-
-    private void CoolDownFunction()
-    {
-        if (ThrowNinjaStar.coolDownTimer >= 0)
-        {
-            ThrowNinjaStar.coolDownTimer -= Time.deltaTime;
-        }
-    }
-
 }

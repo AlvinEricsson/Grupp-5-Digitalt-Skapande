@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ThrowNinjaStar : MonoBehaviour
 {
-    public static float coolDown;
-    public static float coolDownTimer;
+    public float coolDown;
+    public float coolDownTimer;
     public GameObject Throwing_Star;
     public Transform throwPoint;
     // Start is called before the first frame update
