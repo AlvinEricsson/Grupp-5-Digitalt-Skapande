@@ -20,6 +20,8 @@ public class Health_Player : MonoBehaviour
     public string chosenscene;
     public CameraShake cameraShake;
 
+    public Animator anim;
+
     private void Start()
     {
         coolDownTimer = coolDown;
@@ -69,8 +71,8 @@ public class Health_Player : MonoBehaviour
 
 
             SceneManager.LoadScene(chosenscene);
-
         }
+
     }
 
     private void CoolDownFunction()
@@ -88,6 +90,7 @@ public class Health_Player : MonoBehaviour
         if (collision.gameObject.tag == "GroundEnemy" && coolDownTimer <= 0)
         {
             CanTakeDamage();
+            
             //coolDownTimer = coolDown;
         }
         if (collision.gameObject.tag == "Arrow")
