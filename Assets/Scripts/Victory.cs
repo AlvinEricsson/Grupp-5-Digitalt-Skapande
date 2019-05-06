@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
-
+    public GameManager gameMaster;
     public SpriteRenderer rend;
     public Sprite sprite;
     public float timer;
@@ -15,7 +15,7 @@ public class Victory : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-
+            gameMaster.CompleteLevel();
             rend.sprite = sprite;
         win = true;
     }
