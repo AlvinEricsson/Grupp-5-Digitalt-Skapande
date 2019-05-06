@@ -7,7 +7,7 @@ public class AttackScript : MonoBehaviour
     private bool attacking = false;
 
     private float attackTimer = 0;
-    private float attackCD = 0.3f;
+    private float attackCD = 0.5f;
     private int direction;
 
     public Collider2D attackTrigger;
@@ -42,9 +42,6 @@ public class AttackScript : MonoBehaviour
         {
             direction = 3;
         }
-
-
-
 
         if (direction == 1)
         {
