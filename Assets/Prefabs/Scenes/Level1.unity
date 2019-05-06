@@ -5560,14 +5560,6 @@ PrefabInstance:
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 1197342765}
-    - target: {fileID: 790992764, guid: 1dd056c69e596644dbec286abc235386, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1828232361}
-    - target: {fileID: 786509109, guid: 1dd056c69e596644dbec286abc235386, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dd056c69e596644dbec286abc235386, type: 3}
 --- !u!1 &1214562883
@@ -18491,12 +18483,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 746947188065571022, guid: 1b44ad5a65b2c904caca56a1cbae7c3e,
     type: 3}
   m_PrefabInstance: {fileID: 587665009}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1828232361 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 790992768, guid: 1dd056c69e596644dbec286abc235386,
-    type: 3}
-  m_PrefabInstance: {fileID: 1213612701}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1845712194
 PrefabInstance:
