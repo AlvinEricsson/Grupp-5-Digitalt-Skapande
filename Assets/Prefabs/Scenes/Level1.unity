@@ -18673,11 +18673,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoolEnemyYolo (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2596507417367867062, guid: 882bf10f191f2304cab3b040ad48364d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596507417367867059, guid: 882bf10f191f2304cab3b040ad48364d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18733,18 +18728,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2596507417367867059, guid: 882bf10f191f2304cab3b040ad48364d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4252019172884567361, guid: 882bf10f191f2304cab3b040ad48364d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4252019172884567363, guid: 882bf10f191f2304cab3b040ad48364d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 882bf10f191f2304cab3b040ad48364d, type: 3}
 --- !u!1001 &1848367986
 PrefabInstance:
@@ -20214,7 +20198,7 @@ PrefabInstance:
     - target: {fileID: 5786550248980036978, guid: 67dcf98ce81ac6d40b3c1a4604fc1086,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5786550248980036982, guid: 67dcf98ce81ac6d40b3c1a4604fc1086,
         type: 3}
