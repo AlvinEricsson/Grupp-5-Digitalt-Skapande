@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 790992764}
   - component: {fileID: 1620707556}
   - component: {fileID: 1813347959}
+  - component: {fileID: 1915837902}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5.35
   m_Material: {fileID: 6200000, guid: 18d997ec6bc6fbb43b8d2a81b04ad065, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -158,7 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 9.1
   groundCheck: {fileID: 1596451590}
-  jumpSpeed: 8.2
+  jumpSpeed: 20
+  canmove: 0
   jumpSound: {fileID: 4602856027634322748, guid: cca4b82b48ea47c439131e2ae4eeb54c,
     type: 3}
 --- !u!114 &790992766
@@ -304,6 +306,22 @@ MonoBehaviour:
   attackTrigger: {fileID: 981698496663907317}
   attackTriggerUp: {fileID: 5483861475434041377}
   attackTriggerDown: {fileID: 6575717767263054413}
+--- !u!114 &1915837902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790992756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0b5fc5f4f62ce42ab1cc1d275a377d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 790992762}
+  knockbackX: 10000
+  knockbackY: 10
+  waitForMove: 1
 --- !u!1 &1596451588
 GameObject:
   m_ObjectHideFlags: 0
