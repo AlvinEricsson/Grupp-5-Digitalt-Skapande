@@ -5405,7 +5405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790992757, guid: 1dd056c69e596644dbec286abc235386, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 790992757, guid: 1dd056c69e596644dbec286abc235386, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18034,7 +18034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115a6c23204baef46a831cc0dd3c6c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: 21.48, y: -1}
+  lastCheckPointPos: {x: 4.35, y: -0.76}
 --- !u!4 &1669803862
 Transform:
   m_ObjectHideFlags: 0
@@ -19948,12 +19948,12 @@ PrefabInstance:
     - target: {fileID: 8351461501177512728, guid: 83bc6a19c45f57e4bbfe6c0385ccb035,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 142.42
+      value: 142.56
       objectReference: {fileID: 0}
     - target: {fileID: 8351461501177512728, guid: 83bc6a19c45f57e4bbfe6c0385ccb035,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.63
+      value: 6.72
       objectReference: {fileID: 0}
     - target: {fileID: 8351461501177512728, guid: 83bc6a19c45f57e4bbfe6c0385ccb035,
         type: 3}

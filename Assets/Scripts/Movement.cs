@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        Bomb.anim.SetBool("IsWaiting", true);
     }
 
     // Update is called once per frame

@@ -15,6 +15,7 @@ TagManager:
   - Hp_Pick_Up
   - Arrow
   - BombActivator
+  - explosion
   layers:
   - Default
   - TransparentFX
