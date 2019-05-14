@@ -14,6 +14,9 @@ TagManager:
   - GM
   - Hp_Pick_Up
   - Arrow
+  - BombActivator
+  - explosion
+  - HItboxHit
   layers:
   - Default
   - TransparentFX
