@@ -100,6 +100,13 @@ public class Health_Player : MonoBehaviour
             var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
             Destroy(sound, 1);
         }
+        if (collision.gameObject.tag == "explosion")
+        {
+            health = health - 3f;
+            StartCoroutine(cameraShake.Shake(.05f, 1f));
+            var sound = Instantiate(soundDamageTaken, transform.position, Quaternion.identity);
+            Destroy(sound, 1);
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

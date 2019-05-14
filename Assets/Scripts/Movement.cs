@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour
     public GroundCheck groundCheck;
     public float jumpSpeed;
     private float dirX;
-    public bool canmove;
 
     public GameObject jumpSound;
 
@@ -22,42 +21,38 @@ public class Movement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        canmove = true;
+        Bomb.anim.SetBool("IsWaiting", true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canmove == true)
+        dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+        if (Mathf.Abs(dirX) > 0 && rbody.velocity.y == 0)
         {
+            anim.SetBool("IsRunning", true);
+        }
+        else
+        {
+            anim.SetBool("IsRunning", false);
+        }
 
-            dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        if (rbody.velocity.y == 0)
+        {
+            anim.SetBool("IsJumping", false);
+            anim.SetBool("IsFalling", false);
+        }
 
-            if (Mathf.Abs(dirX) > 0 && rbody.velocity.y == 0)
-            {
-                anim.SetBool("IsRunning", true);
-            }
-            else
-            {
-                anim.SetBool("IsRunning", false);
-            }
+        if (rbody.velocity.y > 0)
+        {
+            anim.SetBool("IsJumping", true);
+        }
 
-            if (rbody.velocity.y == 0)
-            {
-                anim.SetBool("IsJumping", false);
-                anim.SetBool("IsFalling", false);
-            }
-
-            if (rbody.velocity.y > 0)
-            {
-                anim.SetBool("IsJumping", true);
-            }
-
-            if (rbody.velocity.y < 0)
-            {
-                anim.SetBool("IsJumping", false);
-                anim.SetBool("IsFalling", true);
-            }
+        if (rbody.velocity.y < 0)
+        {
+            anim.SetBool("IsJumping", false);
+            anim.SetBool("IsFalling", true);
         }
 
 
