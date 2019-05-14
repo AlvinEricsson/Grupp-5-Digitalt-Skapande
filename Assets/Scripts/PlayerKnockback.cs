@@ -18,7 +18,7 @@ public class PlayerKnockback : MonoBehaviour
             
             rb.GetComponent<Rigidbody2D>().velocity = new Vector2(knockbackX, knockbackY);
             Movement move = gameObject.GetComponent<Movement>();
-            move.canmove = false;
+           // move.canmove = false;
             Invoke("MoveAgain", waitForMove);
         }
     }
@@ -26,6 +26,6 @@ public class PlayerKnockback : MonoBehaviour
     void MoveAgain()
     {
         Movement move = gameObject.GetComponent<Movement>();
-        move.canmove = true;
+        //move.canmove = true;
     }
 }
