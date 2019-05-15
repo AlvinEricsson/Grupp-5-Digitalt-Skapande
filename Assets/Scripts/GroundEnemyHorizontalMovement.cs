@@ -18,12 +18,12 @@ public class GroundEnemyHorizontalMovement : MonoBehaviour
         if (left == true)
         {
             rbody.velocity = -(Vector2)transform.right * speed;
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
             rbody.velocity = (Vector2)transform.right * speed;
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
     }

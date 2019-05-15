@@ -25,7 +25,7 @@ public class Victory : MonoBehaviour
         {
             timer = timer + Time.deltaTime;
         }
-        if (timer > 5f)
+        if (timer > 4f)
         {
             SceneManager.LoadScene(chosenScene);
         }
