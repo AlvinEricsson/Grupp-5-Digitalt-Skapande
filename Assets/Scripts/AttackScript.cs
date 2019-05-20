@@ -18,6 +18,8 @@ public class AttackScript : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject swordSound;
+
     void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -53,6 +55,9 @@ public class AttackScript : MonoBehaviour
                 attackTimer = attackCD;
 
                 attackTrigger.enabled = true;
+                var sound = Instantiate(swordSound, transform.position, Quaternion.identity);
+                Destroy(sound, 1);
+                
                 
             }
         }
@@ -64,7 +69,9 @@ public class AttackScript : MonoBehaviour
                 attackTimer = attackCD;
 
                 attackTriggerUp.enabled = true;
-                
+                var sound = Instantiate(swordSound, transform.position, Quaternion.identity);
+                Destroy(sound, 1);
+
             }
         }
         if (direction == 3)
@@ -75,7 +82,9 @@ public class AttackScript : MonoBehaviour
                 attackTimer = attackCD;
 
                 attackTriggerDown.enabled = true;
-                
+                var sound = Instantiate(swordSound, transform.position, Quaternion.identity);
+                Destroy(sound, 1);
+
             }
         }
 

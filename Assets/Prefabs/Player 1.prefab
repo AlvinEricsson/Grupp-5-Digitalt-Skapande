@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 1620707556}
   - component: {fileID: 5131377871614028775}
   - component: {fileID: 1915837902}
+  - component: {fileID: 1213612703}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -101,6 +102,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -233,6 +235,8 @@ MonoBehaviour:
   Throwing_Star: {fileID: 3093350966591809884, guid: ba32b576b3e0e7c419939f9b27eaddcc,
     type: 3}
   throwPoint: {fileID: 539831798}
+  throwningStarSound: {fileID: 5347093581665821557, guid: c1c1ca7ce238f8c4198e16b71497aaee,
+    type: 3}
 --- !u!114 &790992764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +309,8 @@ MonoBehaviour:
   attackTrigger: {fileID: 981698496663907317}
   attackTriggerUp: {fileID: 5483861475434041377}
   attackTriggerDown: {fileID: 6575717767263054413}
+  swordSound: {fileID: 5018058308110545975, guid: 292e1396f0f716e42a894db473de9be5,
+    type: 3}
 --- !u!114 &1915837902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +327,19 @@ MonoBehaviour:
   knockbackX: 100000
   knockbackY: 10
   waitForMove: 0
+--- !u!114 &1213612703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790992756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246d27f5f9d38cc47912bd396e173c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 5
 --- !u!1 &1596451588
 GameObject:
   m_ObjectHideFlags: 0
