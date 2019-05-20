@@ -8,6 +8,7 @@ public class ThrowNinjaStar : MonoBehaviour
     public float coolDownTimer;
     public GameObject Throwing_Star;
     public Transform throwPoint;
+    public GameObject throwningStarSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,8 @@ public class ThrowNinjaStar : MonoBehaviour
         Debug.Log("Hej");
         GameObject trowingStar = Instantiate(Throwing_Star, throwPoint.position, throwPoint.rotation);
         trowingStar.transform.localScale = transform.localScale;
+        var sound = Instantiate(throwningStarSound, transform.position, Quaternion.identity);
+        Destroy(sound, 1);
     }
 
 }
